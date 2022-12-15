@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="before.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <h3>PENJUALAN TIKET KERETA API</h3>
+    </div>
+
+    <!-- header -->
+    <div class="banner">
+      <img src="banner2.svg" alt="" />
+    </div>
+    <!-- end -->
+
+    <!-- content-first -->
+    <div class="container">
+      <form action="" name="form" id="my-form">
+        <div class="input-first">
+          <h4>Nama</h4>
+          <input type="text" placeholder="Masukan nama anda" required name="input_nama" id="nama" />
+          <h4>Tujuan</h4>
+          <select name="input_tujuan" onchange="munculhargatiket()" id="tujuan">
+            <option value="Pilih">-- Pilih --</option>
+            <option value="Bandung">Bandung</option>
+            <option value="Purwakarta">Purwakarta</option>
+            <option value="Solo">Solo</option>
+            <option value="Semarang">Semarang</option>
+          </select>
+          <h4>type tiket</h4>
+          <select id="tipe" name="input_tipetiket" onchange="munculhargatipetiket()">
+            <option value="Pilih">-- Pilih --</option>
+            <option value="Ekonomi">Ekonomi</option>
+            <option value="Eksekutif">Eksekutif</option>
+            <option value="Bisnis">Bisnis</option>
+          </select>
+        </div>
+        <!-- first end -->
+
+        <!-- second-input -->
+        <div class="input-second">
+          <div class="second">
+            <h4>Jumlah tiket</h4>
+            <input type="text" placeholder="masukan jumlah tiket" name="input_jumlahtiket" id="jumlah" onchange="totalharga()" />
+          </div>
+          <div class="second">
+            <h4>Harga</h4>
+            <input type="text" name="output_hargatujuan" disabled id="harga" />
+          </div>
+          <div class="second">
+            <h4>Biaya tambahan</h4>
+            <input type="text" name="output_tambahanbiaya" disabled id="biaya" />
+          </div>
+          <div class="second">
+            <h4>member?</h4>
+            <input type="checkbox" name="memberbukan" onchange="apakahmember()" id="member" />
+          </div>
+          <div class="second">
+            <h4>diskon</h4>
+            <input type="text" name="output_diskon" disabled id="diskon" />
+          </div>
+        </div>
+        <!-- second end -->
+
+        <!-- third-input -->
+        <div class="third-input">
+          <h4>total harga</h4>
+          <span>Rp</span>
+          <input type="text" name="output_totalharga" disabled id="total" />
+        </div>
+
+        <!-- button -->
+        <div class="btn">
+          <button onclick="bayar()">bayar</button>
+          <button type="reset" value="clear">Clear</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function kirim() {
+        nama1 = document.fform.nama.value;
+        pass1 = document.fform.pass.value;
+        if (nama1 == 'naufal' && pass1 == 'faqih') {
+          document.location.href = 'before.html';
+        } else {
+          alert('User Name / Password yang Anda masukan salah ... !');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="login">
+      <div class="avatar">
+        <img src="bg.jpeg" />
+      </div>
+      <h2>Login</h2>
+      <h3>Welcome Naufal</h3>
+
+      <form class="login-form" name="fform">
+        <div class="textbox">
+          <input type="email" placeholder="Username" name="nama" />
+          <span class="material-symbols-outlined"> account_circle </span>
+        </div>
+        <div class="textbox">
+          <input type="password" placeholder="Password" name="pass" />
+          <span class="material-symbols-outlined"> lock </span>
+        </div>
+        <button type="button" value="OK" onclick="kirim()">LOGIN</button>
+        <a href="https://website.com">Belum punya akun?</a>
+      </form>
+    </div>
+  </body>
+</html>
